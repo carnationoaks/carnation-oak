@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carnation Oaks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <a href="https://www.facebook.com/carnationoaks"
+          ><img id="logo" src="./assets/logo.png" alt="Logo" />Carnation Oaks</a
+        >
+      </div>
+
+      <div class="burger-menu" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="header-right">
+        <span class="close-btn" onclick="toggleMenu()">&times;</span>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#service">Services</a>
+        <a href="javascript:void(0);" onclick="openPopup()">Book Now</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </header>
+
+    <div id="home" class="home">
+      <div class="home-img">
+        <img src="./assets/home.jpg" alt="Background" />
+      </div>
+      <div class="home-div">
+        <h1>Carnation Oaks</h1>
+        <h2>Personal Care Home for Elders</h2>
+        <p>
+          At Carnation Oaks, we provide compassionate, personalized care in a
+          safe and supportive environment. Our dedicated team ensures comfort,
+          dignity, and a true sense of home for every resident. Experience
+          quality care tailored to your needs.
+        </p>
+        <button class="open-btn" onclick="openPopup()">Book Now</button>
+      </div>
+    </div>
+
+    <div id="about" class="about">
+      <h2>About Us</h2>
+      <div class="content">
+        <div class="left column">
+          <p>
+            Carnation Oaks is dedicated to providing compassionate and
+            personalized care in a warm, safe, and supportive environment.
+          </p>
+          <p>
+            Our mission is to enhance the quality of life for seniors by
+            offering tailored assistance, professional caregiving, and a strong
+            sense of community. We believe that every individual deserves to age
+            with dignity, comfort, and independence while feeling valued and
+            respected.
+          </p>
+          <p>
+            With a team of experienced caregivers, Carnation Oaks ensures that
+            residents receive the right level of support, from daily assistance
+            and medication management to nutritious meals and engaging
+            activities. By fostering a home-like atmosphere built on trust and
+            companionship, we create a welcoming space where seniors can thrive
+            and enjoy a fulfilling, meaningful life.
+          </p>
+        </div>
+        <div class="right column">
+          <img src="./assets/about.jpeg" alt="About Us" />
+        </div>
+      </div>
+    </div>
+
+    <div id="service" class="services">
+      <h2>Why Choose Us?</h2>
+      <div class="card-container">
+        <div class="card">
+          <img src="./assets/nurse.jpg  " alt="Nurse On-Call" />
+          <h3>Nurse Case Manager On-Call</h3>
+          <p>
+            24/7 availability of a nurse case manager to ensure proper medical
+            care.
+          </p>
+        </div>
+        <div class="card">
+          <img src="./assets/security.jpg" alt="Security Support" />
+          <h3>24/7 Security and Support</h3>
+          <p>Continuous security monitoring to keep residents safe.</p>
+        </div>
+        <div class="card">
+          <img src="./assets/medication.png" alt="Medication Management" />
+          <h3>Medication Management</h3>
+          <p>Ensuring proper medication administration and scheduling.</p>
+        </div>
+        <div class="card">
+          <img src="./assets/meal.jpeg" alt="Meal Options" />
+          <h3>Tailored Meal Options</h3>
+          <p>Nutritious and personalized meal plans for residents.</p>
+        </div>
+        <div class="card">
+          <img src="./assets/care.jpg" alt="Professional Caregivers" />
+          <h3>Professional Caregivers</h3>
+          <p>Experienced caregivers providing compassionate support.</p>
+        </div>
+        <div class="card">
+          <img src="./assets/room.jpg" alt="Private Rooms" />
+          <h3>Private & Semi-Private Rooms</h3>
+          <p>Comfortable living spaces tailored to personal preferences.</p>
+        </div>
+      </div>
+    </div>
+    <div class="book-container" id="popup">
+      <div class="popup-box">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>BOOKING</h2>
+        <form name="submit-to-google-sheet">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            class="name"
+            id="name"
+            name="Name"
+            placeholder="Enter your Name"
+            required
+          />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="email"
+            name="Email"
+            placeholder="Enter your Email"
+            required
+          />
+          <label for="date">Select Date</label>
+          <input type="date" id="date" name="Date" class="date" required />
+          <label for="time">Select Time</label>
+          <input type="time" id="time" name="Time" class="time" required />
+          <button type="submit" class="submit-btn">Confirm Booking</button>
+        </form>
+      </div>
+    </div>
+    <div id="contact" class="contact-container">
+      <div class="contact-left">
+        <img src="/assets/logo1.jpg" alt="Carnation Oaks Logo" />
+      </div>
+      <div class="contact-mid">
+        <h2>CONTACT US</h2>
+        <p id="subhead">Carnation Oaks Personal Care Home</p>
+        <p>
+          <i class="fa-solid fa-location-dot"></i>
+          <span>903 Carnation St., Katy, Texas 77494 </span>
+        </p>
+        <p><i class="fa-solid fa-phone"></i> <span>+346 698 1257</span></p>
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:jmetxinc@gmail.com">jmetxinc@gmail.com</a>
+        </p>
+      </div>
+      <div class="contact-right">
+        <h2>OFFICE HOURS</h2>
+        <p>Monday to Sunday: <br />9:00am - 5:00pm</p>
+        <h2>CONNECT WITH US</h2>
+        <a href="https://www.facebook.com/carnationoaks" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2025 Carnation Oaks. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      const scriptURL =
+        'https://script.google.com/macros/s/AKfycbyBT8gVDs_8_g6lidO8bCQZsO9HzUiU7r80OI4LvXc3ld4Tqd0MsD5yRJ_CV5cc-KLV/exec';
+      const form = document.forms['submit-to-google-sheet'];
+
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message));
+      });
+    </script>
+  </body>
+</html>
